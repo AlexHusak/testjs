@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,300,400,500,600,800,900&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="core.css">
+</head>
+<body>
+    <div class="tabs">
+        <ul>
+            <li><a href="#tab1">Обо мне</a></li>
+            <li><a href="#tab2">Портфолио</a></li>
+            <li><a href="#tab3">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="tabs_content">
+        <div class="tabs_content--item" id="tab1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque rem quo officia quas labore soluta? Assumenda, expedita. Eos, est animi.</div>
+        <div class="tabs_content--item" id="tab2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum at distinctio corporis ab ullam? Error esse asperiores vel adipisci quas ex voluptates, voluptatibus, totam impedit eos exercitationem? Sit, quas nemo officia vel accusantium qui cum tempora quis libero dolor impedit.</div>
+        <div class="tabs_content--item" id="tab3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo dignissimos alias autem corrupti hic corporis cum tenetur, assumenda soluta dolor inventore similique quia harum in quidem reiciendis accusamus nostrum vel fuga atque deleniti officiis, iste cumque! Maxime voluptatibus repudiandae odio aliquid, veritatis velit assumenda sint hic, aliquam aut est possimus veniam sit dignissimos sapiente dicta excepturi maiores. Ex ratione recusandae necessitatibus maiores, non asperiores corrupti modi ab, odit, mollitia ipsa. Accusamus, est explicabo quas necessitatibus ad provident delectus omnis sit quis possimus sunt inventore temporibus in nulla voluptates fugit alias, optio blanditiis labore cupiditate! Veniam cupiditate dolor cum libero sapiente?</div>
+    </div>
+
+    <div class="tab">
+        <div class="tab__items"></div>
+        <div class="tab__box"></div>
+    </div>
+    
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="core.js"></script>
+
+    <script>
+        $('.tabs').on('click', 'a', function (e) {
+            event.preventDefault;
+            $('.active').removeClass('active');
+            $(this).parent().toggleClass('active');
+            var attr = $(this).attr('href');
+            $(attr).toggleClass('active');
+        });
+    </script>
+    <style>
+    @keyframes puls {
+        from {
+            width: 6rem;
+            height: 6rem;
+        }
+        to {
+            width: 9rem;
+            height: 9rem;
+        }
+        }
+    </style>
+</body>
+</html>
